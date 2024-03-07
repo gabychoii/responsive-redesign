@@ -69,7 +69,7 @@ div[href="menuItems"] {
     flex-direction: column;
     justify-content: end;
     margin-right: 0rem;
-    margin-left: 0rem;
+    margin-left: 2rem;
     right: 1.5rem;
     box-sizing: border-box;
 
@@ -91,7 +91,7 @@ div[href="accountItems"] {
     padding-bottom: 8px;
 
     display: flex;
-    justify-content: flex-end; /* Align items to the end (right side) */
+    justify-content: flex-end; 
 
 }
 
@@ -118,7 +118,7 @@ div[href="accountItems"] {
 
 input[type="text"][href="searchBar"] {
     flex-grow: 2; 
-    width: auto; 
+    width: 120px; 
     
 }
 @media screen and (max-width: 600px){
@@ -192,7 +192,6 @@ input[type="text"][href="searchBar"] {
     }
 
     div[href="menuItems"] {
-        /* position: relative; */
         flex-direction: row;
         position: static; 
         width: 100%; 
@@ -200,16 +199,14 @@ input[type="text"][href="searchBar"] {
         ul li a {
             margin-right: 1rem;
         }
-        /* margin: 0; */
-        /* justify-content: start; */
     }
 
     input[type="text"][href="searchBar"]{
         position: absolute;
-        left: 0; /* Positions the search bar at the left edge of its nearest positioned ancestor */
-        /* Adjusts the search bar to be centered vertically relative to its position */
-        width: auto; /* Adjust the width as needed */
+        left: 0;
+        width: auto; 
         margin-left: 1.5rem;
+        align-self: center;
     }
     
     div[href="accountItems"] {
@@ -218,7 +215,7 @@ input[type="text"][href="searchBar"] {
     }
 
     #accountIcon{
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
 
     #secondaryNav a {
@@ -251,10 +248,17 @@ input[type="text"][href="searchBar"] {
     padding: 10px;
 }
 
+#secondaryNav a:hover {
+    font-weight: bold;
+  }
+
+#secondaryNav a.active {
+    font-weight: bold;
+  }
+
 
 @media screen and (min-width: 600px){
     #primaryNav a {
-        /* float: left; */
         color: black;
         text-align: center;
         height: auto;
@@ -264,7 +268,7 @@ input[type="text"][href="searchBar"] {
         display: flex;    
       }
 
-      #primaryNav a[href="#home"] {
+    #primaryNav a[href="#home"] {
         border-right: 1px solid #AAAAAA; 
         padding-right: 28px; 
     }
@@ -280,7 +284,6 @@ input[type="text"][href="searchBar"] {
     }
 
     #secondaryNav a {
-        /* float: left; */
         color: black;
         text-align: center;
         height: auto;
@@ -296,27 +299,25 @@ input[type="text"][href="searchBar"] {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centers the images horizontally */
-    align-items: center; /* Centers the images vertically */
-    flex-wrap: wrap; /* Allows images to wrap onto the next line if not enough space */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
     margin-top: 2rem;
 }
 
 #homePage img {
     width: 40%; 
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Covers the area without distorting the aspect ratio, you can also use contain */
+    height: auto; 
+    object-fit: cover; 
     flex-shrink: 0;
 
 }
 #image1{
-    /* width: 40%; */
     height: auto;
     margin: 2rem, 0rem, 2rem, 2rem;
 }
 
 #image2{
-    /* width: 40%; */
     height: auto;
     margin: 2rem, 2rem, 2rem, 0rem;
 }
@@ -330,5 +331,3 @@ input[type="text"][href="searchBar"] {
         width: 70%;
     }
 }
-
-
